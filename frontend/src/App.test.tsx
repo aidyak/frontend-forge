@@ -1,9 +1,8 @@
-import { render } from "vitest-browser-react";
+import { render, screen } from "@testing-library/react";
 import { expect, test } from "vitest";
 import App from "./App";
 
-test("loads and displays greeting", async () => {
-  const screen = render(<App />)
-
-  await expect.element(screen.getByText("Vite + React")).toBeInTheDocument();
-})
+test("loads and displays greeting", () => {
+  render(<App />);
+  expect(screen.getByText("Vite + React")).toBeInTheDocument();
+});

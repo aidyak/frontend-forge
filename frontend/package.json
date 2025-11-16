@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest run --browser=chromium"
+    "test": "vitest run",
+    "test:browser": "VITEST_BROWSER=true vitest run --browser=chromium"
   },
   "dependencies": {
     "biome": "^0.3.3",
@@ -18,12 +19,14 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.1.1",
     "@vitejs/plugin-react-swc": "^4.2.1",
     "@vitest/browser": "^4.0.9",
+    "@vitest/browser-playwright": "^4.0.9",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
